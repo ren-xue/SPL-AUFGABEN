@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration>
+	<feature automatic="selected" name="Buchungsverwaltung"/>
+	<feature automatic="selected" name="Payment"/>
+	<feature automatic="unselected" name="Card"/>
+	<feature manual="selected" name="Creditcard"/>
+	<feature automatic="unselected" name="Cash"/>
+	<feature name="language"/>
+	<feature automatic="selected" name="Produktmanagement"/>
+	<feature name="Lagermanagement"/>
+	<feature automatic="selected" manual="selected" name="Liefermanagement"/>
+	<feature automatic="selected" name="Lieferstyp"/>
+	<feature name="Expressversnd"/>
+	<feature manual="selected" name="E-mail"/>
+	<feature name="Selbst"/>
+	<feature name="Liefersinformation"/>
+	<feature name="Lieferadresse"/>
+	<feature name="Search"/>
+	<feature name="ID"/>
+	<feature name="Name"/>
+	<feature automatic="selected" name="Acount"/>
+	<feature automatic="selected" name="Profil"/>
+	<feature automatic="selected" name="login"/>
+	<feature automatic="selected" name="auslogin"/>
+	<feature name="Buchungsinformation"/>
+	<feature automatic="selected" name="Scurity"/>
+	<feature automatic="selected" name="Kontakt"/>
+	<feature manual="selected" name="Email"/>
+	<feature name="Telefon"/>
+	<feature name="Brief"/>
+</configuration>

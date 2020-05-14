@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Buchungsverwaltung">
+			<alt mandatory="true" name="Payment">
+				<description>Wählt man ein Bezahlungweise aus,vor Bezahlung sicherheits prüfen</description>
+				<graphics key="collapsed" value="false"/>
+				<feature name="Card">
+					<description>Mit Karte bezahlen</description>
+				</feature>
+				<feature name="Creditcard">
+					<description>Mit Creidcard bezahlen</description>
+				</feature>
+				<feature name="Cash">
+					<description>Mit Bargeld bezahlen</description>
+				</feature>
+			</alt>
+			<feature name="language">
+				<description>Benutzer kann über verschidene softwaresprache verfügen</description>
+			</feature>
+			<and mandatory="true" name="Produktmanagement">
+				<description>
+					Es ist notwendig,die Produkte zu verwalten.Damit Buchungssystem gut funktioniert,
+					soll Händler zur Zeit den Status von Produkt kennen.
+				</description>
+				<graphics key="collapsed" value="false"/>
+				<feature name="Lagermanagement">
+					<description>Informiert ,wie viele Einheiten haben wir noch,wie viel Produkt kann noch gebucht werden</description>
+				</feature>
+				<and mandatory="true" name="Liefermanagement">
+					<description>
+						Nach der Buchung von Produkt kümmern wir jetzt um die Lieferungsdienst
+						Es ist auch notwendig.
+					</description>
+					<graphics key="collapsed" value="false"/>
+					<alt mandatory="true" name="Lieferstyp">
+						<description>Auf welche Weise bekommt man diesen Produkt</description>
+						<graphics key="collapsed" value="false"/>
+						<feature name="Expressversnd">
+							<description>Durch Post,dazu braucht man die Adresse,die in Acountdaten gespeicht wird.</description>
+						</feature>
+						<feature name="E-mail">
+							<description>Durch Email , die Emailadresse auch in Acountdaten gespeicht</description>
+						</feature>
+						<feature name="Selbst">
+							<description>Bei manchen Produkt kann auch persönlich abholen</description>
+						</feature>
+					</alt>
+					<feature name="Liefersinformation">
+						<description>Es kann den status folgen,damit die Kunden liefersinformation kennen</description>
+					</feature>
+					<feature name="Lieferadresse">
+						<description>
+							Kunde soll ein Adresse anbieten,ein Hausaderess oder ein Emailadresse
+						</description>
+					</feature>
+				</and>
+				<or name="Search">
+					<description>Im System kann die Kunden nach den gewünschten Produkt suchen</description>
+					<graphics key="collapsed" value="false"/>
+					<feature name="ID">
+						<description>Jeder Produkt hat ein eindutige ID, man kann nach ID diesen Produkt finden</description>
+					</feature>
+					<feature name="Name">
+						<description>Produkte können auch durch Name finden</description>
+					</feature>
+				</or>
+			</and>
+			<and name="Acount">
+				<description>
+					Ein Kunde kann ein Acount erstellen , damit dem Kunde weitere  Kaufe erleichtert.
+					Es schafft,der Kundedaten zu verwalten.
+				</description>
+				<graphics key="collapsed" value="false"/>
+				<feature name="Profil">
+					<description>
+						Kundensdaten, der Kunde kann  email-Aderesse
+						adresse ,telefonnummber hier erstellen.Auch username und Password
+						speichern,damit der Kunde einloggen kann.
+					</description>
+				</feature>
+				<feature mandatory="true" name="login">
+					<description>Der Kunde loggt sich mit Username und Passwort ein</description>
+				</feature>
+				<feature name="auslogin">
+					<description>Nach der shopping kann der Kunde sich ausloggen</description>
+				</feature>
+				<feature name="Buchungsinformation">
+					<description>
+						In der Buchungsinformation wird der Kunde informieren,den Status von gebuchten
+						Produkten
+					</description>
+				</feature>
+			</and>
+			<feature mandatory="true" name="Scurity">
+				<description>
+					Sicherheit Prüfen.In olineshoping ist Sicherheit ein wichtiges Thema.
+					ZB,vor der Bezahlung muss die Sicherheit prüfen,damit die Kundensdaten
+					sicher sind
+				</description>
+			</feature>
+			<or mandatory="true" name="Kontakt">
+				<description>Kunde kann den Händler kontakieren,Frage stellen,beschwerden</description>
+				<graphics key="collapsed" value="false"/>
+				<feature name="Email">
+					<description>Durch Email</description>
+				</feature>
+				<feature name="Telefon">
+					<description>Durch Telefon</description>
+				</feature>
+				<feature name="Brief">
+					<description>Durch Post </description>
+				</feature>
+			</or>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>Search</var>
+				<var>Lagermanagement</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Buchungsinformation</var>
+				<var>Liefersinformation</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Profil</var>
+				<var>Lieferadresse</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>

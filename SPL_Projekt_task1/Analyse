@@ -1,0 +1,26 @@
+Domäne:Als Domäne habe ich Buchungssystem ausgewählt.Während der Entwicklung von Internet,
+ist die Onlineshopping heuzutage auch eine wichtige Weise,die Produkte zu kaufen . 
+Falls alle große Händlern bietennein Plattform zum online-kaufen.
+In der Prozess von Online-shopping ist es notwendig,ein System zu entwicklen, 
+das der Prozess verwalten kann.ZB,Douglas,eine international Parfümerie-Filialkette
+besitzt nicht nur physikaische  Geschäfte,auch onlineshopping .
+Ein anderes Beispiel ist Amazon,er bietet ein Plattform, über 
+die man einfach kaufen oder verkaufen kann.
+
+Als Feature habe ich einige typische Funktionen ,die im System realisiert werden kann,
+ausgewält.Ausfürliche Erklärung habe ich in der Feature Description geschrieben.
+
+Hier möchte ich noch über die ausgewälte Konfiguration besprechen:
+
+KON1:Ein Produkt durch searchfunktion ausgewählt und mit Karte bezahlt ,anschließend 
+durch Expressversand mit angegebenen Adresse bekommt.
+
+KON2:Ein internationale Kunde bezahlt mit Kreditkarte ein Produkt durch Expressversand
+bekommt.
+
+KON3:Ein Kunde kauft eine virtulle Produkt (durch Email) und mit Karte bekommt.ZB,E-Book
+
+KON4:Der Kunde kauft zwar online,aber er holt den Produkt persönlich ab.ZB,Essen
+
+KON5:In der Konfiguration5 kann der Kunden sehr bequem einkaufen mit ein Accountdaten.
+ 
