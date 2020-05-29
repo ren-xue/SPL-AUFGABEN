@@ -1,0 +1,11 @@
+true
+Kontakt=Orange
+Payment=NO_COLOR
+Expressversand=Light_Gray
+Produktmanagement=Light_Green
+Lieferstyp=Magenta
+language=Dark_Green
+Scurity=Blue
+Liefermanagement=Dark_Green
+Acount=Pink
+login=Cyan

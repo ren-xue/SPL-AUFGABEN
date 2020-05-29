@@ -1,0 +1,10 @@
+Allgemeiner Fehler:
+Queried Property 'feature_name' does not exist!
+
+Fehler:
+1.Queried Property 'feature_name' does not exist!
+1.Bei der Implementierung der Anmeldefunktion kann der registrierte Benutzer 
+die Anmeldefunktion nicht realisieren, und der registrierte Benutzer 
+wird nicht in der Collection gespeichert.
+
+

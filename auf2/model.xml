@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="vertical"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<calculations key="runcalculationsautomatically" value="true"/>
+		<graphics key="layoutalgorithm" value="4"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="Buchungsverwaltung">
+			<feature name="language"/>
+			<alt abstract="true" mandatory="true" name="Payment">
+				<feature abstract="true" name="Card"/>
+				<feature abstract="true" name="Creitcard"/>
+				<feature abstract="true" name="Cash"/>
+			</alt>
+			<or mandatory="true" name="Kontakt">
+				<feature abstract="true" name="Email"/>
+				<feature abstract="true" name="Telefon"/>
+				<feature abstract="true" name="Brief"/>
+			</or>
+			<feature mandatory="true" name="Scurity"/>
+			<and name="Acount">
+				<feature abstract="true" name="Profil"/>
+				<feature mandatory="true" name="login"/>
+				<feature abstract="true" name="auslogin"/>
+				<feature abstract="true" name="Buchungsinformation"/>
+			</and>
+			<and mandatory="true" name="Produktmanagement">
+				<feature abstract="true" name="Lagermanagement"/>
+				<or abstract="true" name="search">
+					<feature abstract="true" name="ID"/>
+					<feature abstract="true" name="Name"/>
+				</or>
+				<and mandatory="true" name="Liefermanagement">
+					<feature abstract="true" name="Liefersinformation"/>
+					<feature abstract="true" name="Lieferadresse"/>
+					<alt mandatory="true" name="Lieferstyp">
+						<feature abstract="true" name="Selbst"/>
+						<feature abstract="true" name="Emails"/>
+						<feature name="Expressversand"/>
+					</alt>
+				</and>
+			</and>
+		</and>
+	</struct>
+	<constraints>
+		<rule>
+			<imp>
+				<var>search</var>
+				<var>Lagermanagement</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Buchungsinformation</var>
+				<var>Lieferadresse</var>
+			</imp>
+		</rule>
+		<rule>
+			<imp>
+				<var>Profil</var>
+				<var>Lieferadresse</var>
+			</imp>
+		</rule>
+	</constraints>
+</featureModel>
