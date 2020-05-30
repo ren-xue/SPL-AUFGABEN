@@ -82,7 +82,7 @@
 					<description>Informiert ,wie viele Einheiten haben wir noch,wie viel Produkt kann noch gebucht werden</description>
 				</feature>
 				<or abstract="true" name="search">
-					<description>Im System kann die Kunden nach den gewünschten Produkt suchen</description>
+					<description>Im System kann die Kunden nach den gewünschten Produkt suchen.</description>
 					<feature abstract="true" name="ID">
 						<description>Jeder Produkt hat ein eindutige ID, man kann nach ID diesen Produkt finden</description>
 					</feature>
