@@ -13,6 +13,7 @@ public class Main {
 		
 		if(PropertyManager.getProperty("Acount")) {
 			System.out.println("Acount");
+			Acount accout = new Acount(); 
 			
 		}
 		
@@ -59,13 +60,14 @@ public class Main {
 
 
 /*
- * I simply implemented two classes for simulation. Many large project links are recorded in Readme
+ * I simply implemented two Features for simulation. 
+ * Many large project links are recorded in Readme
  */
 
 class Acount {
 	
 }
-
+//User class
 class User {
 	String username;
 	String password;
@@ -101,16 +103,19 @@ class User {
 
 class Login {	
 	
-	static Collection<User> users = new ArrayList<User>();//speichern alle User
+	static Collection<User> users = new ArrayList<User>();//Save all users
 	boolean isLogin = false; 
 	static Scanner scanner = new Scanner(System.in);
-	
-	void choose() {    //regeister or login
+	/*
+	 * According to the user's choice, 
+	 * provide the corresponding function, register or log in
+	 */
+	void choose() {    
         System.out.println("Please select function A (Registration) B (Login)");
         boolean chooseoption = true;
         while(chooseoption) {
     	   String option = scanner.next();
-         if("a".equalsIgnoreCase(option)){
+         if("a".equalsIgnoreCase(option)){    //register
         	System.out.println("please input username ：");
         	String regusername = scanner.next();
             System.out.println("please input password:");
@@ -118,7 +123,7 @@ class Login {
             chooseoption = false;
             reg(regusername,regpassword);
 
-         }else if("b".equalsIgnoreCase(option)){
+         }else if("b".equalsIgnoreCase(option)){  //login 
         	System.out.println("please input username ：");
         	String username = scanner.next();
             System.out.println("please input password:");
@@ -141,7 +146,7 @@ class Login {
 	 *  the login is successful, otherwise the login fails.
 	 */
 	void login(String username ,String password) {
-    Iterator<User> it = users.iterator();
+    Iterator<User> it = users.iterator();  //check the Collection 
     while(it.hasNext()){
         User user = it.next();
         if(user.username ==username &&user.password.equals(password)){     
@@ -163,12 +168,12 @@ class Login {
 	 */
 	void reg(String username,String password) {
 		 User u_sers = null;
-		 u_sers = new User(username,null);
+		 u_sers = new User(username,null);  //Check if the username is already registered
 			if(users.contains(username)){
 				System.out.println("User exits");	
 			}
 			u_sers.setPassword(password);
-			users.add(u_sers);
+			users.add(u_sers);  //add new user 
 			System.out.println("registration success");
 			System.out.println(users);
 			return;		
@@ -184,10 +189,10 @@ class Language {
 	void settinglanguage() {	
 		String basename = "properties.properties";
 		Scanner in = new Scanner(System.in);
-		Locale us = Locale.US;
-		Locale de = Locale.GERMANY;
+		Locale us = Locale.US;  //three languages to choose
+		Locale de = Locale.GERMANY; 
 		Locale cn = Locale.CHINA;
-		Locale lan = us;
+		Locale lan = us;  //initial-language
 		System.out.println("Please Choose one Language(US/DE/CN): ");
 		String choose = in.next();		
 		switch(choose) {
@@ -197,6 +202,7 @@ class Language {
 		default:
 			System.out.println("We cann not support this language!");
 		}		
+		//Get the corresponding language vocabulary stored in the file
 		ResourceBundle myResources = ResourceBundle.getBundle(basename,lan);
 		String hello = myResources.getString("hello");
 		String setting = myResources.getString("setting");
