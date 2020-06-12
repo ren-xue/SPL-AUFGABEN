@@ -1,0 +1,4 @@
+1.Warning:This annotation is superfluous.
+2.Bei der Implementierung der Anmeldefunktion kann der registrierte Benutzer 
+die Anmeldefunktion nicht realisieren, und der registrierte Benutzer 
+wird nicht in der Collection gespeichert.

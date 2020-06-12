@@ -1,3 +1,4 @@
+
 /*
  * Die Klasse implements die Methode des Interfaces 
  */
