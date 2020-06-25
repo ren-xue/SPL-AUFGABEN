@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/Acount.jar"/>
+	<classpathentry kind="lib" path="lib/Email.jar"/>
+	<classpathentry kind="lib" path="lib/Expressversand.jar"/>
+	<classpathentry kind="lib" path="lib/Kontakt.jar"/>
+	<classpathentry kind="lib" path="lib/Lieferstyp.jar"/>
+	<classpathentry kind="lib" path="lib/Scurity.jar"/>
+	<classpathentry kind="lib" path="lib/login.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

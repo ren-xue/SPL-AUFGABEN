@@ -1,0 +1,4 @@
+Wenn man die Klasse Main ausgeführt, gibt keinen Ausgebe in den Konsole aus.
+Aber alle Interfaces werden in Main Methode geladen und dem entsprechenden Methoden aufgerufen
+Desweiters wird  auch in jedem Unterprojekt(Feature-Projekt)das 
+Interface implementiert und info.xml richtig gesetzt.
